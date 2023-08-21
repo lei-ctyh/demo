@@ -1,0 +1,21 @@
+2023-08-01 22:58:06 [com.xxl.job.core.thread.JobThread#run]-[133]-[xxl-job, JobThread-6-1690901578076] <br>----------- xxl-job job execute start -----------<br>----------- Param:
+2023-08-01 22:58:06 [com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]-[39]-[xxl-job, JobThread-6-1690901578076] XXL-JOB, Hello World.
+2023-08-01 22:58:06 [com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]-[42]-[xxl-job, JobThread-6-1690901578076] beat at:0
+2023-08-01 22:58:08 [com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]-[42]-[xxl-job, JobThread-6-1690901578076] beat at:1
+2023-08-01 22:58:10 [com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]-[42]-[xxl-job, JobThread-6-1690901578076] beat at:2
+2023-08-01 22:58:12 [com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]-[42]-[xxl-job, JobThread-6-1690901578076] beat at:3
+2023-08-01 22:58:13 [com.xxl.job.core.thread.JobThread#run]-[194]-[xxl-job, JobThread-6-1690901578076] <br>----------- JobThread toStop, stopReason:web container destroy and kill the job.
+2023-08-01 22:58:13 [com.xxl.job.core.thread.JobThread#run]-[204]-[xxl-job, JobThread-6-1690901578076] <br>----------- JobThread Exception:java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.xxl.job.core.handler.impl.MethodJobHandler.execute(MethodJobHandler.java:31)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:166)
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at java.lang.Thread.sleep(Thread.java:342)
+	at java.util.concurrent.TimeUnit.sleep(TimeUnit.java:386)
+	at com.xxl.job.executor.service.jobhandler.SampleXxlJob.demoJobHandler(SampleXxlJob.java:43)
+	... 5 more
+<br>----------- xxl-job job execute end(error) -----------
+2023-08-01 22:58:15 [com.xxl.job.core.thread.TriggerCallbackThread#callbackLog]-[197]-[xxl-job, executor TriggerCallbackThread] <br>----------- xxl-job job callback fail, callbackResult:ReturnT [code=500, msg=xxl-job remoting error(Connection refused: connect), for url : http://127.0.0.1:8080/xxl-job-admin/api/callback, content=null]
