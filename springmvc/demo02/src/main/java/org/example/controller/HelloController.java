@@ -26,4 +26,19 @@ public class HelloController {
     public String file() {
         return "file";
     }
+
+    @RequestMapping("/a?a/testant")
+    public String testant() {
+        return "ant";
+    }
+
+    @RequestMapping("/a*a/testant")
+    public String testant2() {
+        return "ant2";
+    }
+
+    @RequestMapping("/**/testant")
+    public String testant3() {
+        return "ant3";
+    }
 }

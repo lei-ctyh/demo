@@ -7,27 +7,10 @@
 <body>
 <h1>首页</h1>
 <a th:href="@{/hello}">HelloWorld</a><br/>
+<a th:href="@{/ana/testant}">测试任意单个字符 ant : ?</a><br/>
+<a th:href="@{/a123a/testant}">测试任意多个字符 ant : *</a><br/>
+<a th:href="@{/a/a/testant}">测试任意目录 ant : **</a><br/>
 
-<form action="" method="get" th:href="@{/file}">
-    <div >
-        <label for="name">Enter your name: </label>
-        <input type="text" name="name" id="name" required />
-    </div>
-    <div >
-        <label for="email">Enter your email: </label>
-        <input type="email" name="email" id="email" required />
-    </div>
-    <div >
-        <input type="submit" value="Subscribe!" />
-    </div>
-</form>
-<form method="get" th:href="@{/file}">
-    <input
-            type="file"
-            id="docpicker"
-            name="filename"
-            accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
-    <button type="submit">提交</button>
 
 </form>
 </body>
